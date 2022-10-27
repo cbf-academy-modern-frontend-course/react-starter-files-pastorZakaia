@@ -9,7 +9,7 @@ pwd
 
 ## NPM and Node.js Versions
 
-To run the `create-react-app` you’ll need to have `Node >= 14.0.0` and `npm >= 5.6` on your machine. 
+To run the `create-react-app` you’ll need to have `Node >= 14.0.0` and `npm >= 5.6` on your machine.
 
 To check your node.js version run the following command:
 
@@ -44,11 +44,11 @@ npm run start
 
 1. Make other cosmetic (look-and-feel only) changes to the [App.css](./src/App.css) file and review the changes in your browser
 
-1. Open [App.js](./src/App.js). Review the main function called `App()`. The return statement outputs what looks like HTML elements e.g. `<img>`, `<a>`, `<p>` tags 
+1. Open [App.js](./src/App.js). Review the main function called `App()`. The return statement outputs what looks like HTML elements e.g. `<img>`, `<a>`, `<p>` tags
 
 1. Change the return statement to output new '**HTML**' elements, e.g.
 
-``` HTML
+```HTML
 <div className="App">
   <h1>My React Page</h1>
   <h2>This is my first React page…</h2>
@@ -62,19 +62,20 @@ npm run start
 1. Create a variable called `h1Style`. The attributes of the style object are similar to CSS class attributes but using camelCase:
 
 ```JavaScript
-const h1Style = { 
+const h1Style = {
   "fontSize":"30px",
   "color": "#cc0000",
   "textTransform": "uppercase"
 };
 ```
-8. Connect the new style object to your `<h1>` element. 
+
+8. Connect the new style object to your `<h1>` element.
 
 ![Example React App Homepage 2](./docs/first-react-app_2.png)
 
-[1]:(https://reactjs.org/docs/dom-elements.html#style)
+[1]: (https://reactjs.org/docs/dom-elements.html#style)
 
-9. Open  [App.css](./src/App.css) and add a class called `.bio`.
+9. Open [App.css](./src/App.css) and add a class called `.bio`.
 
 1. Add a className property to the `<h2>` element in the [App.js](./src/App.js) file.
 
@@ -99,10 +100,10 @@ it('renders without crashing', () => {
 });
 ```
 
-3. The test script will fail with a __ReferenceError__ as the `ReactDOM` is not referenced
+3. The test script will fail with a **ReferenceError** as the `ReactDOM` is not referenced
 
 1. Add a reference to the `ReactDOM` and run the test again. What are the results?
 
 1. Add tests to check that the `<h1>` and `<h2>` elements are render on the page
 
-1. Add a test to check that the text "__My React Page__" can be found on the page.
+1. Add a test to check that the text "**My React Page**" can be found on the page.
