@@ -6,7 +6,7 @@ import GadgetList from './components/GadgetList';
 const mainStyle = {"fontFamily":"Arial"};
 
 const App = () => {
-  const headphones =  [{"title":"Headphones 1"},{"title":"Headphones 2"},{"title":"Headphones 3"},{"title":"Headphones 4"},];
+  const headphones =  [{"title":"Headphones 1", "price": "£3"},{"title":"Headphones 2"},{"title":"Headphones 3"},{"title":"Headphones 4"},{"title":"Headphones 5"}];
   const [headphonesList] = useState(headphones);
 
   return <section style={mainStyle}>

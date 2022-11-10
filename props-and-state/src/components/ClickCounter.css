@@ -1,0 +1,10 @@
+button {
+    display: inline-flex;
+    background-color: #7b38d8 ;
+    border: 10px 5px;
+    font-size: 30px;
+    margin: auto;
+    text-align: center;
+    color:#eeeeee ;
+
+}
