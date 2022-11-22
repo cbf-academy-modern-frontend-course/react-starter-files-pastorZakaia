@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Routes and Forms
 
 ## Task: Adding Routes
@@ -59,3 +60,10 @@ const [hasSumitted, setSubmitted] = useState(false);
 [2]:/routes-and-forms/src/index.js
 [3]:/routes-and-forms/src/components/PetForm.js
 [4]:https://reactjs.org/docs/forms.html
+=======
+# React
+
+In this repository you will find the starter files for all the React sessions
+
+Each session has it's own dedicated folder.
+>>>>>>> origin/main
