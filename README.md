@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Routes and Forms
 
 ## Task: Adding Routes
@@ -9,15 +8,15 @@
 
 1. Run the `npm install` command from the terminal to install the project dependencies. Run `npm start` to start the project
 
-1. Create `<Puppies/>` and `<Ducklings/>` functional component. Use the `<Kittens/>` component as an example 
+1. Create `<Puppies/>` and `<Ducklings/>` functional component. Use the `<Kittens/>` component as an example
 
 1. Add another two routes called `<Puppies/>` and `<Ducklings/>` to the [index.js][2]
 
-1. When complete, navigating to __localhost:3000/*puppies*__ or __localhost:3000/*ducklings*__ will take you to the two new component views you created
+1. When complete, navigating to **localhost:3000/_puppies_** or **localhost:3000/_ducklings_** will take you to the two new component views you created
 
-1. Add a Link for the `<Puppies/>` view and to the `<Ducklings/>` view to enable users to navigate to the components using  breadcrumb links
+1. Add a Link for the `<Puppies/>` view and to the `<Ducklings/>` view to enable users to navigate to the components using breadcrumb links
 
-1. Ensure the new component returns a short __description__ and __image__, e.g. the Kitten component
+1. Ensure the new component returns a short **description** and **image**, e.g. the Kitten component
 
 1. When complete, you should be able to navigate between the components using links in the breadcrumb
 
@@ -27,13 +26,13 @@
 
 1. In Visual Code open the [routes-and-forms][1] folder
 
-1. The [PetForm.js][2] file now contains the code for a [__controlled component__][4].
+1. The [PetForm.js][2] file now contains the code for a [**controlled component**][4].
 
 1. Add the `<PetForm/>` component as a child component of the `<Home/>` component in the [index.js][2] file.
 
 1. Run the project using the `npm start` command to test the functionality
 
-1. The form contains a __name__ field which is a __controlled component__. Add an __age__ and a __colours__ form field as __controlled components__:
+1. The form contains a **name** field which is a **controlled component**. Add an **age** and a **colours** form field as **controlled components**:
 
 ```XML
 <label>Age: <input type="number"/></label>
@@ -46,24 +45,19 @@
 
 1. Use a React.Fragment or short syntax (`<></>`) instead of a `<div>` to encapsulate the form
 
-1. Add a message "__*Thank you for submitting*__" to the output displayed in the `<div></div>` whenever the form is submitted
+1. Add a message "**_Thank you for submitting_**" to the output displayed in the `<div></div>` whenever the form is submitted
 
-1. Ensure the message "__*Thank you for submitting*__" is removed whenever the user changes an input field. <br/><br/>*Hint: add a React Hook that sets a variable when the form is submitted, e.g:*
+1. Ensure the message "**_Thank you for submitting_**" is removed whenever the user changes an input field. <br/><br/>_Hint: add a React Hook that sets a variable when the form is submitted, e.g:_
+
 ```js
 const [hasSumitted, setSubmitted] = useState(false);
 ```
-11. Conditionally display "__*Thank you for submitting*__" depending on if `hasSumitted` is true or false
+
+11. Conditionally display "**_Thank you for submitting_**" depending on if `hasSumitted` is true or false
 
 ![Cute Pets Interface Form](./docs/cute-pet-store-form.png)
 
-[1]:/routes-and-forms/
-[2]:/routes-and-forms/src/index.js
-[3]:/routes-and-forms/src/components/PetForm.js
-[4]:https://reactjs.org/docs/forms.html
-=======
-# React
-
-In this repository you will find the starter files for all the React sessions
-
-Each session has it's own dedicated folder.
->>>>>>> origin/main
+[1]: /routes-and-forms/
+[2]: /routes-and-forms/src/index.js
+[3]: /routes-and-forms/src/components/PetForm.js
+[4]: https://reactjs.org/docs/forms.html
