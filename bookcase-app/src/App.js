@@ -15,7 +15,7 @@ function App() {
   // const books = data; line 9 and 10 do the same thing
   return (
   <div>
-     <h2>Welcome to the Bookcase App</h2>
+     <h2>Welcome to my e-bookshop</h2>
     <Search/>
     
     <bookList book={bookList}/>
