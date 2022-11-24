@@ -1,5 +1,5 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
 const Book = ({ book }) => {
   const {
@@ -11,8 +11,8 @@ const Book = ({ book }) => {
     },
     saleInfo: { retailPrice },
   } = book;
-  const addBook = () => {
-    console.log(`The Book '${title}' was clicked`)
+  const addBook = (title) => {
+    console.log(`The Book '${title}' was clicked`);
   };
   return (
     <div>
@@ -20,7 +20,7 @@ const Book = ({ book }) => {
       {authors.length > 1 ? <p>{authors.join(" and ")}</p> : <p>{authors}</p>}
       <img src={thumbnail} alt={title} />
       <div>
-        <button onClick={addBook}>Add +</button>
+        <button onClick={addBook(title)}>Add +</button>
       </div>
       {book ? (
         <p>£{retailPrice && retailPrice.amount}</p>
@@ -47,7 +47,7 @@ Book.propTypes = {
 Book.defaultProps = {
   saleInfo: {
     retailPrice: {
-      amount: "No price provided"
+      amount: "No price provided",
     },
   },
   volumeInfo: {
@@ -55,10 +55,8 @@ Book.defaultProps = {
     authors: "No authors provided",
     description: "No description provided",
     imageLinks: {
-      thumbnail: "No thumbnail provided"
+      thumbnail: "No thumbnail provided",
     },
   },
 };
 export default Book;
-
-
