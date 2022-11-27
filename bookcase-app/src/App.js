@@ -4,17 +4,23 @@ import data from "./models/books.json";
 import BookList from "./components/BookList";
 // import Button from './components/Button';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Header from "./components/Header";
-
+import Homepage from "./components/Homepage";
 import Search from "./components/Search";
 import keyword from "./components/Search";
 
 function App() {
-  const [books, setbooks] = useState(data);
+  const [books, setBooks] = useState(data);
   const [keyword, setKeyword] = useState("");
 
+  function addBook(title) {
+    {
+      console.log(`The Book '${title}' was clicked`);
+    }
+  }
+
   async function findBooks(value) {
-    const URL = `https://www.googleapis.com/books/v1/volumes?q=$%7Bvalue%7D&filter=paid-ebooks&print-type=books&projection=lite`;
+    const URL = `https://www.googleapis.com/books/v1/volumes?q=${value}}&filter=paid-ebooks&print-type=books&projection=lite`;
+    //https://www.googleapis.com/books/v1/volumes?q=$%{7Bvalue%7D}&filter=paid-ebooks&print-type=books&projection=lite`;
 
     console.log(URL);
 
@@ -23,39 +29,30 @@ function App() {
       setbooks(results.items);
     }
   }
-  function getValue(keyword) {
-    return;
-  }
+  // function getValue(keyword) {
+  //   return;
+  // }
   return (
     <div>
-      <div>
-        <h2>Welcome to my e-bookshop</h2>
-        <Search
-          findBooks={findBooks}
-          keyword={keyword}
-          setKeyword={setKeyword}
-        />
-
-        <BookList books={books} />
-      </div>
-
-      <div>
-        {/* <BrowserRouter>
-<Routes>
-  <Route 
-  exact 
-  path='/' 
-  render= {()=> (
-  <>
-    <header />
-    <h2>Welcome to the Bookcase App</h2>
-    <BookList books ={books}/>
-  </>
-  )} />
-  <bookcase />
-<Routes>
-</BrowserRouter> */}
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route
+            exact
+            path="/"
+            element={
+              <Homepage
+                books={books}
+                setBooks={setBooks}
+                addBook={addBook}
+                getValue={findBooks}
+              />
+            }
+          />
+          <Route path="/search" element={<Search />} />
+          <Route path="/bookcase" element={<BookList />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

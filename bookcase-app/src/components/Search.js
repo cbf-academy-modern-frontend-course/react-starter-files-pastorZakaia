@@ -4,6 +4,7 @@ const Search = (props) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     props.findBooks(props.keyword);
+    props.getValue(keyword);
     console.log(props.keyword);
   };
   return (
