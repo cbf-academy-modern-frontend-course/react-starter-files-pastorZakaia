@@ -1,10 +1,10 @@
 import React, { useState } from "react";
+import Header from "./Header";
 
 const Search = (props) => {
   const handleSubmit = (event) => {
     event.preventDefault();
-    props.findBooks(props.keyword);
-    props.getValue(keyword);
+    props.getValue(props.keyword);
     console.log(props.keyword);
   };
   return (

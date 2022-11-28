@@ -9,9 +9,12 @@ function Header() {
   return (
     <>
       <h1> My e-Bookcase</h1>
-      <Link to="/">Home</Link>
+      <Link to="/">Home </Link>
       <Link to="/bookcase" className="bookLink">
         Bookcase
+      </Link>
+      <Link to="/About" className="About">
+        About
       </Link>
     </>
   );

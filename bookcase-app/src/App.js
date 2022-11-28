@@ -7,6 +7,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Homepage from "./components/Homepage";
 import Search from "./components/Search";
 import keyword from "./components/Search";
+import About from "./components/pages/About";
+import Header from "./components/Header";
 
 function App() {
   const [books, setBooks] = useState(data);
@@ -26,7 +28,7 @@ function App() {
 
     const results = await fetch(URL).then((res) => res.json());
     if (!results.error) {
-      setbooks(results.items);
+      setBooks(results.items);
     }
   }
   // function getValue(keyword) {
@@ -35,6 +37,7 @@ function App() {
   return (
     <div>
       <BrowserRouter>
+        <Header />
         <Routes>
           <Route
             exact
@@ -45,10 +48,12 @@ function App() {
                 setBooks={setBooks}
                 addBook={addBook}
                 getValue={findBooks}
+                keyword={keyword}
+                setKeyword={setKeyword}
               />
             }
           />
-          <Route path="/search" element={<Search />} />
+
           <Route path="/bookcase" element={<BookList />} />
           <Route path="/about" element={<About />} />
         </Routes>

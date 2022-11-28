@@ -1,11 +1,10 @@
 import React from "react";
 
-import Header from "../components/Header";
+import Header from "../Header";
 import "./About.css";
 function About() {
   return (
     <div>
-      <Header />
       <div className="about-bg">
         <h3>Welcome to the Bookcase application</h3>
         <p>

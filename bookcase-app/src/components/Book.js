@@ -17,7 +17,7 @@ const Book = ({ book }) => {
   return (
     <div>
       <h1>{title}</h1>
-      {authors.length > 1 ? <p>{authors.join(" and ")}</p> : <p>{authors}</p>}
+      {authors?.length > 1 ? <p>{authors.join(" and ")}</p> : <p>{authors}</p>}
       <img src={thumbnail} alt={title} />
       <div>
         <button onClick={addBook(title)}>Add +</button>
@@ -27,7 +27,7 @@ const Book = ({ book }) => {
       ) : (
         <p>No price found</p>
       )}
-      <p>{description.substring(0, 200)}...</p>
+      <p>{description?.substring(0, 200)}...</p>
     </div>
   );
 };
